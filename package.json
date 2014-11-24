@@ -1,0 +1,23 @@
+{
+  "name": "kira-shubik-pink",
+  "version": "0.0.0",
+  "description": "Pink ====",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KiraShubik/Pink.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KiraShubik/Pink/issues"
+  },
+  "homepage": "https://github.com/KiraShubik/Pink",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-lintspaces": "^0.6.0"
+  }
+}
