@@ -29,7 +29,8 @@ module.exports = function(grunt) {
             development: {
                 options: {
                     sourceMap : true,
-                    sourceMapFilename : 'style.css.map',
+                    sourceMapFilename : 'css/style.css.map',
+                    sourceMapURL: 'style.css.map',
                     plugins: [
                         new LessAutoprefixer({ browsers: [ 'last 2 versions' ] }),
                     ],
@@ -64,8 +65,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-lintspaces');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.registerTask('development', ['less']);
-    grunt.registerTask('production', ['less', 'cssmin']);
+
+    grunt.registerTask('development', ['less:development']);
+    grunt.registerTask('production', ['less:production', 'cssmin']);
     grunt.registerTask('lint', [ 'lintspaces' ]);
 
 
