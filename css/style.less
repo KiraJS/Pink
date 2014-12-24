@@ -38,7 +38,8 @@ nav,section,article,{
 .review__caption,
 .trust,
 .product__section_dis_none,
-.footer{
+.footer,
+.feature__image{
     display: none;
 }
 .background-container{
@@ -56,7 +57,6 @@ nav,section,article,{
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .logo {
     width: 50%;
@@ -66,6 +66,9 @@ nav,section,article,{
     color: #ffffff;
     text-transform: uppercase;
     padding: @padding;
+    background-image:url(../img/logo/Pink-logo-1.png);
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
 }
 .menu {
     width: 100%;
@@ -91,7 +94,13 @@ nav,section,article,{
     border-top: solid 1px #485461;
     background: @color_dark_blue;
     line-height: 65px;
-
+}
+.menu__item:hover{
+    border-bottom: 2px solid @color_white;
+}
+.menu__item:active{
+    opacity: 0.3;
+    border-bottom: none;
 }
 .menu__control_action_open{
     min-height: 65px;
@@ -110,7 +119,6 @@ nav,section,article,{
     color: #ffffff;
     text-transform: uppercase;
     display: block;
-    background: @color_dark_blue;
     min-height: 65px;
     width: 100%;
     padding: 0 0 0 @padding;
@@ -162,8 +170,15 @@ nav,section,article,{
     margin: 0 auto 0;
     border: solid white 3px;
     border-radius: 40px;
-    padding: 14px 0 14px 0;
+    padding: 12px 0 16px 0;
     margin-bottom: 30px;
+}
+.download__button:hover{
+    color:@color_red;
+    background: @color_white;
+}
+.download__button:active{
+    color:lighten(@color_red, 30%);
 }
 .download__icon-container{
     width: 190px;
@@ -183,7 +198,6 @@ nav,section,article,{
 }
 .download__icon_os_ios{
     background-image: url(../img/aple_icon.png);
-
 }
 .download__icon_os_android{
     background-image: url(../img/apndroid_icon.png);
@@ -287,7 +301,7 @@ nav,section,article,{
     margin: 0;
 }
 .product__item{
-    max-width: 235px;
+    max-width: 100%;
     list-style: none;
     border: solid  2px #e5e5e5;
     border-bottom: none;
@@ -324,7 +338,6 @@ nav,section,article,{
     background-repeat: no-repeat;
     background-position: center;
     position:relative;
-
 }
 .map:before,
 .map:after{
@@ -358,7 +371,6 @@ nav,section,article,{
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 1200px;
             margin: 0 auto 0;
         }
         .background-container{
@@ -374,17 +386,14 @@ nav,section,article,{
             margin: 0 0 95px 0;
         }
         .logo{
-            padding: 0 0 0 50px;
-            margin: 0;
-        }
-        .logo:before{
-            content:"";
             display: inline-block;
-            width: 60px;
-            height: 42px;
-            margin-right: 10px;
-            background-image: url(../img/logo_img.png);
-            background-repeat: no-repeat;
+            height: 40px;
+            padding: 30px 0 10px 130px;
+            margin: auto;
+            background-image:url(../img/logo/Pink-logo-2@1x.png);
+        }
+        .menu{
+            top:110px;
         }
         .flex-container{
             display: flex;
@@ -408,7 +417,6 @@ nav,section,article,{
             font-size: 40px;
             line-height: 48px;
             width: 60%;
-
         }
         .download{
             flex-grow: 2;
@@ -559,7 +567,7 @@ nav,section,article,{
             width:50%;
             margin: 0;
         }
-        .contacts__item_pos_center{
+        .contacts__item_type_adress{
             width: 100%;
         }
         .title_size_big{
@@ -574,19 +582,11 @@ nav,section,article,{
             min-height: 110px;
             background: @color_white;
         }
-        .logo_theme_black{
-            color:black;
-            padding: 0;
-            margin: auto;
-        }
-        .logo_theme_black:before{
-            content:"";
-            display: inline-block;
-            width: 60px;
-            height: 42px;
-            margin-right: 10px;
-            background-image: url(../img/logo_img_red.png);
+        .logo__footer{
+            .logo;
+            background-image: url(../img/logo/Pink-logo-footer-2@1x.png);
             background-repeat: no-repeat;
+            background-position: 20% 50%;
         }
         .social__item{
             display: inline-block;
@@ -641,5 +641,160 @@ nav,section,article,{
             align-self: center;
             margin: 0;
             margin-right: 7px;
+        }
+    }
+/* Стили для декстопа */
+    @media screen and (min-width: 1200px){
+
+        .menu__control{
+            display: none;
+        }
+        .logo{
+            width:10%;
+            background-image:url(../img/logo/Pink-logo-3@1x.png);
+        }
+        .menu{
+            position: static;
+            width: 65%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu__link{
+            display: inline-block;
+            margin: auto;
+            text-transform: none;
+            font-weight: @weight_regular;
+            text-align: left;
+            background: none;
+            border: none;
+        }
+        .offer{
+            width:50%;
+        }
+        .offer__title{
+            font-size: 50px;
+            line-height: 60px;
+            width:50%;
+            margin: 0 auto 30px;
+        }
+        .download{
+            width:50%;
+            box-sizing: border-box;
+        }
+        .download__button{
+            margin: 0 auto 60px;
+        }
+        .download__icon-container{
+            margin: 0 auto 60px;
+        }
+        .download__text{
+            width: 70%;
+        }
+        .features__list{
+            display: flex;
+            width:80%;
+            justify-content:space-around;
+            margin: 0 auto 0;
+        }
+        .features__image-container{
+            display: none;
+        }
+        .features__title{
+            font-size: 30px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .features__item{
+            width: 30%;
+        }
+        .features__title,.features__text{
+            text-align: center;
+        }
+        .title_size_big{
+            font-size: 50px;
+            line-height: 60px;
+        }
+        .features__text{
+            font-size: 18px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .feature__image{
+            display: block;
+            width: 195px;
+            height:385px;
+            margin: 0 auto 70px;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+        }
+        .feature__image_type_mood{
+            background-image: url(../img/Iphone_decstop_left.png);
+        }
+        .feature__image_type_world{
+            background-image: url(../img/Iphone_decstop_center.png);
+        }
+        .feature__image_type_friends{
+            background-image: url(../img/Iphone_decstop_right.png);
+        }
+        .trust__item{
+            width: 65%;
+        }
+        .trust__title{
+            font-size:30px;
+            line-height: 30px;
+        }
+        .trust__text, .trust__link{
+            font-size:18px;
+            line-height: 30px;
+        }
+        .review__item{
+            margin: 0 0 30px;
+        }
+        .review__text{
+            padding-top: 70px;
+            background-image: url(../img/review_icon.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .review__text_icon_white{
+            background-image: url(../img/review_icon_color_white.png);
+        }
+        .product__section{
+            width:25%;
+            margin: 0;
+        }
+        .product__item{
+            font-size: @font_main;
+            padding: 17px;
+        }
+        .product__header{
+             min-height: 95px;
+        }
+        .contacts{
+            display: flex;
+            flex-direction: row;
+            min-height: 350px;
+        }
+        .contacts__item{
+            width:33%;
+            margin: 0;
+            flex-grow: 1;
+        }
+        .contacts__item_type_phone{
+            order: 1;
+        }
+        .contacts__item_type_adress{
+            order: 2;
+        }
+        .contacts__item_type_mail{
+            order: 3;
+        }
+        .logo__footer{
+            .logo;
+            width: 33%;
+            background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
+            background-repeat: no-repeat;
+            background-position: 20% 50%;
         }
     }
