@@ -1,0 +1,47 @@
+// Обычные стили для contacts
+.contacts{
+    position: relative;
+}
+.contacts__text{
+    display: block;
+}
+
+// Планшетные стили для contacts
+@media screen and (min-width: 700px){
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 350px;
+    }
+    .contacts__item{
+        width:50%;
+        margin: 0;
+    }
+    .contacts__item_type_adress{
+        width: 100%;
+    }
+}
+
+// Декстопные стили для contacts
+@media screen and (min-width: 1200px){
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        min-height: 350px;
+    }
+    .contacts__item{
+        width:33%;
+        margin: 0;
+        flex-grow: 1;
+    }
+    .contacts__item_type_phone{
+        order: 1;
+    }
+    .contacts__item_type_adress{
+        order: 2;
+    }
+    .contacts__item_type_mail{
+        order: 3;
+    }
+}

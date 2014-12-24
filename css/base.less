@@ -1,0 +1,73 @@
+// Обычные стили для тегов и общих элементов
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:@font_base;
+    line-height: @line-height_base;
+    font-weight:@weight_regular;
+    color: @color_blue;
+    min-width: @width;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+}
+nav,section,article,{
+    display: block;
+}
+.title{
+    font-size: @font_title;
+    font-weight: @weight_light;
+    line-height: @line-height_title;
+    text-align: center;
+}
+.title_size_bold{
+    font-weight: @weight_bold;
+    font-size: @font_main;
+}
+.title_theme_red{
+    color: @color_red;
+    text-decoration: none;
+}
+.title_theme_white{
+    color:@color_white
+}
+.title_size_big{
+    font-size: 50px;
+    line-height: 60px;
+}
+    .background-container{
+        max-width: 100%;
+        background-image: url(../img/bg_img_phone_iphone.png), url(../img/bg_photo.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 90% bottom, 50% 0% ;
+        background-size: 600px auto, cover;
+}
+
+// Планшетные стили для тегов и общих элементов
+@media screen and (min-width: 700px){
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto 0;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-container_dir_row{
+        display: flex;
+        flex-direction: row;
+    }
+     .slider__container{
+        width: 88%;
+        margin: 0 auto 0;
+    }
+     .title_size_big{
+        font-size: 40px;
+        line-height: 48px;
+        width:100%;
+     }
+}
