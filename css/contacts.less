@@ -17,9 +17,10 @@
     .contacts__item{
         width:50%;
         margin: 0;
-    }
-    .contacts__item_type_adress{
-        width: 100%;
+
+        &_type_adress{
+            width: 100%;
+        }
     }
 }
 
@@ -34,14 +35,15 @@
         width:33%;
         margin: 0;
         flex-grow: 1;
-    }
-    .contacts__item_type_phone{
-        order: 1;
-    }
-    .contacts__item_type_adress{
-        order: 2;
-    }
-    .contacts__item_type_mail{
-        order: 3;
+
+        &_type_phone{
+            order: 1;
+        }
+        &_type_adress{
+            order: 2;
+        }
+        &_type_mail{
+            order: 3;
+        }
     }
 }
