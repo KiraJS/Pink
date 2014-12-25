@@ -1,9 +1,18 @@
-// Обычные стили для product
 .product{
     margin:0 0 30px 0;
+
+    @media @tablet{
+        margin: 0 0 110px;
+    }
 }
 .product__section_dis_none{
     display: none;
+
+    @media @tablet{
+            height: 30px;
+            background: @color_white;
+        }
+    }
 }
 .product__header{
     background: @color_dark_blue;
@@ -23,6 +32,10 @@
     }
     &_lbl_hit{
         overflow: hidden;
+    }
+
+    @media @tablet{
+        min-height: 85px;
     }
 }
 .product__title{
@@ -65,17 +78,8 @@
     &_included_no{
         background-image: url(../img/icon_no.png);
     }
-}
 
-// Планшетные стили для product
-@media screen and (min-width: 700px){
-    .product{
-        margin: 0 0 110px;
-    }
-    .product__section{
-        width:25%;
-    }
-    .product__item{
+    @media @tablet{
         padding: 10px;
         text-transform: none;
 
@@ -86,6 +90,13 @@
             overflow: hidden;
             background-position: center;
         }
+    }
+}
+
+// Планшетные стили для product
+@media @tablet{
+    .product__section{
+        width:25%;
     }
     .product__title{
         padding: 10px;
@@ -98,18 +109,10 @@
     .product__section_dis_none{
         display: inline-block;
     }
-    .product__header{
-        min-height: 85px;
-
-        &_dis_none{
-            height: 30px;
-            background: @color_white;
-        }
-    }
 }
 
 // Декстопные стили для product
-@media screen and (min-width: 1200px){
+@media @desctop{
     .product__section{
         width:25%;
         margin: 0;

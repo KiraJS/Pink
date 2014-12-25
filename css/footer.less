@@ -1,17 +1,17 @@
 // Обычные стили для footer
 .footer{
     display: none;
-}
 
-// Планшетные стили для footer
-@media screen and (min-width: 700px){
-    .footer{
+    @media @tablet{
         display: flex;
         flex-direction: row;
         width: 100%;
         min-height: 110px;
         background: @color_white;
-    }
+}
+
+// Планшетные стили для footer
+@media @tablet{
     .social,
     .copyright,
     .logo-container{
@@ -34,6 +34,10 @@
         background-repeat: no-repeat;
         background-position: 20% 50%;
         margin: auto;
+
+        @media @desctop{
+            background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
+        }
     }
     .social,
     .copyright{
@@ -74,11 +78,5 @@
         align-self: center;
         margin: 0;
         margin-right: 7px;
-    }
-}
-// Декстопные стили для footer
-@media screen and (min-width: 1200px) {
-    .logo__footer{
-        background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
     }
 }

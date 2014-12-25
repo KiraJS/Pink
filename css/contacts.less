@@ -1,19 +1,25 @@
 // Обычные стили для contacts
 .contacts{
     position: relative;
+
+    @media @tablet{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 350px;
 }
+
+    @media @desktop{
+        display: flex;
+        flex-direction: row;
+        min-height: 350px;
+    }
 .contacts__text{
     display: block;
 }
 
 // Планшетные стили для contacts
-@media screen and (min-width: 700px){
-    .contacts{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-height: 350px;
-    }
+@media @tablet{
     .contacts__item{
         width:50%;
         margin: 0;
@@ -21,29 +27,21 @@
         &_type_adress{
             width: 100%;
         }
+        @media @desktop{
+            width:33%;
+            margin: 0;
+            flex-grow: 1;
+
+            &_type_phone{
+                order: 1;
+            }
+            &_type_adress{
+                order: 2;
+            }
+            &_type_mail{
+                order: 3;
+            }
+        }
     }
 }
 
-// Декстопные стили для contacts
-@media screen and (min-width: 1200px){
-    .contacts{
-        display: flex;
-        flex-direction: row;
-        min-height: 350px;
-    }
-    .contacts__item{
-        width:33%;
-        margin: 0;
-        flex-grow: 1;
-
-        &_type_phone{
-            order: 1;
-        }
-        &_type_adress{
-            order: 2;
-        }
-        &_type_mail{
-            order: 3;
-        }
-    }
-}

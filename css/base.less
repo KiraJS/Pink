@@ -8,6 +8,13 @@ body {
     min-width: @width;
     margin: 0;
     padding: 0;
+
+    @media @tablet{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto 0;
+    }
 }
 h1,h2,h3,h4,p{
     padding: 0;
@@ -36,7 +43,12 @@ nav,section,article,{
     &_size_big{
         font-size: 50px;
         line-height: 60px;
-    }
+
+        @media @tablet{
+            font-size: 40px;
+            line-height: 48px;
+            width:100%;
+        }
 }
     .background-container{
         max-width: 100%;
@@ -47,13 +59,8 @@ nav,section,article,{
 }
 
 // Планшетные стили для тегов и общих элементов
-@media screen and (min-width: 700px){
-    body{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto 0;
-    }
+@media @tablet{
+
     .flex-container{
         display: flex;
         flex-direction: column;
@@ -67,9 +74,4 @@ nav,section,article,{
         width: 88%;
         margin: 0 auto 0;
     }
-     .title_size_big{
-        font-size: 40px;
-        line-height: 48px;
-        width:100%;
-     }
 }
