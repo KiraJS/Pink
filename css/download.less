@@ -1,10 +1,22 @@
-// Обычные стили для download
 .download{
     display: block;
     min-height: 160px;
     background-color: @color_dark_blue;
     padding: 25px @padding 15px @padding;
     margin: 0 auto 30px;
+
+    @media @tablet{
+        flex-grow: 2;
+        background: none;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 85px;
+    }
+    @media @desktop{
+        width:60%;
+        box-sizing: border-box;
+    }
 }
 .download__button{
     display: block;
@@ -18,13 +30,18 @@
     border: solid white 3px;
     border-radius: 40px;
     padding: 12px 0 16px 0;
-}
-.download__button:hover{
-    color:@color_red;
-    background: @color_white;
-}
-.download__button:active{
-    color:lighten(@color_red, 30%);
+
+    @media @desktop{
+        margin-bottom: 60px;
+    }
+
+    &:hover{
+        color:@color_red;
+        background: @color_white;
+    }
+    &:active{
+        color:lighten(@color_red, 30%);
+    }
 }
 .download__icon-container{
     width: 190px;
@@ -33,6 +50,13 @@
     display: flex;
     flex-direction: row;
     justify-content:space-around;
+
+    @media @tablet{
+        margin-bottom: 40px;
+    }
+    @media @desktop{
+        margin-bottom: 60px;
+    }
 }
 .download__icon{
     width: 46px;
@@ -41,57 +65,29 @@
     vertical-align: bottom;
     background-repeat: no-repeat;
     background-position: center bottom;
-}
-.download__icon_os_ios{
-    background-image: url(../img/aple_icon.png);
-}
-.download__icon_os_android{
-    background-image: url(../img/apndroid_icon.png);
-}
-.download__icon_os_windows{
-    background-image: url(../img/win_icon.png);
+
+    &_os_ios{
+        background-image: url(../img/aple_icon.png);
+    }
+    &_os_android{
+        background-image: url(../img/apndroid_icon.png);
+    }
+    &_os_windows{
+        background-image: url(../img/win_icon.png);
+    }
 }
 .download__text{
     width:73%;
     margin: 0 auto 0;
     color: @color_white;
     text-align: center;
-}
 
-// Планшетные стили для download
-@media screen and (min-width: 700px){
-    .download{
-        flex-grow: 2;
-        background: none;
-        width: 54%;
-        padding: 25px @padding 15px @padding;
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 85px;
-    }
-    .download__text{
+    @media @tablet{
         width:78%;
         font-size: 18px;
         line-height: 24px;
     }
-    .download__icon-container{
-        margin-bottom: 40px;
-    }
-}
-
-// Декстопные стили для download
-@media screen and (min-width: 1200px){
-    .download{
-        width:50%;
-        box-sizing: border-box;
-    }
-    .download__button{
-        margin-bottom: 60px;
-    }
-    .download__icon-container{
-        margin-bottom: 60px;
-    }
-    .download__text{
+    @media @desktop{
         width: 70%;
     }
 }
