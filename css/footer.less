@@ -1,20 +1,19 @@
-// Обычные стили для footer
 .footer{
     display: none;
-}
 
-// Планшетные стили для footer
-@media screen and (min-width: 700px){
-    .footer{
+    @media @tablet{
         display: flex;
         flex-direction: row;
         width: 100%;
         min-height: 110px;
         background: @color_white;
     }
-    .social,
-    .copyright,
-    .logo-container{
+}
+
+.social,
+.copyright,
+.logo-container{
+    @media @tablet{
         display: flex;
         padding: 0;
         margin: 0;
@@ -22,7 +21,9 @@
         min-height: 70px;
         text-align: center;
     }
-    .logo__footer{
+}
+.logo__footer{
+    @media @tablet{
         font-size: 32px;
         text-decoration: none;
         font-weight:@weight_bold;
@@ -35,12 +36,19 @@
         background-position: 20% 50%;
         margin: auto;
     }
-    .social,
-    .copyright{
+    @media @desktop{
+        background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
+    }
+}
+.social,
+.copyright{
+    @media @tablet{
         justify-content:center;
         padding-top: 15px;
     }
-    .social__button{
+}
+.social__button{
+    @media @tablet{
         display: inline-block;
         width:43px;
         height: 43px;
@@ -51,33 +59,38 @@
         background-position: center;
         margin: auto;
     }
-    .social__button_link_tw{
-        background-image: url(../img/icon_twitter.png);
+    &_link_tw{
+        @media @tablet{
+            background-image: url(../img/icon_twitter.png);
+        }
     }
-    .social__button_link_fb{
-        background-image: url(../img/icon_facebook.png);
+    &_link_fb{
+        @media @tablet{
+            background-image: url(../img/icon_facebook.png);
+        }
     }
-    .social__button_link_yt{
-        background-image: url(../img/icon_youtube.png);
+    &_link_yt{
+        @media @tablet{
+            background-image: url(../img/icon_youtube.png);
+        }
     }
-    .copyright__by,
-    .copyright__for{
+}
+
+.copyright__by,
+.copyright__for{
+    @media @tablet{
         text-decoration: none;
         color: black;
         font-weight: @weight_bold;
     }
-    .copyright__by,
-    .copyright__for,
-    .copyright__img{
+}
+.copyright__by,
+.copyright__for,
+.copyright__img{
+    @media @tablet{
         display: inline-block;
         align-self: center;
         margin: 0;
         margin-right: 7px;
-    }
-}
-// Декстопные стили для footer
-@media screen and (min-width: 1200px) {
-    .logo__footer{
-        background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
     }
 }
