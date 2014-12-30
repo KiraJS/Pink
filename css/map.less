@@ -1,32 +1,32 @@
-// Обычные стили для map
 .map{
     min-height: 380px;
     background-image: url(../img/map.jpg);
     background-repeat: no-repeat;
     background-position: center;
     position:relative;
-}
-.map:before,
-.map:after{
-    content: "";
-    display: block;
-    text-align: center;
-    margin: auto;
-    position:absolute;
-    background-repeat: no-repeat;
-}
-.map:before{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url(../img/bg_contact.png);
-    background-size: contain;
-}
-.map:after{
-    height: 38px;
-    width: 35px;
-    top: 140px;
-    left: 110px;
-    background-image: url(../img/map_point.png);
+
+    &:before,
+    &:after{
+        content: "";
+        display: block;
+        text-align: center;
+        margin: auto;
+        position:absolute;
+        background-repeat: no-repeat;
+    }
+    &:before{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../img/bg_contact.png);
+        background-size: contain;
+    }
+    &:after{
+        height: 38px;
+        width: 35px;
+        top: 140px;
+        left: 110px;
+        background-image: url(../img/map_point.png);
+    }
 }
