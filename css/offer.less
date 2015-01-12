@@ -1,16 +1,8 @@
-// Обычные стили для offer
 .offer{
     min-height: 370px;
     margin: 0 auto 0;
-}
-.offer__title{
-    width: 70%;
-    margin: 0 auto 0;
-}
 
-// Планшетные стили для offer
-@media screen and (min-width: 700px){
-    .offer{
+    @media @tablet{
         display: flex;
         flex-direction: row;
         flex-grow: 1;
@@ -20,19 +12,20 @@
         display: inline-block;
         width: 60%;
     }
-    .offer__title{
-        font-size: 40px;
-        line-height: 48px;
-        width: 60%;
+    @media @desktop{
+        width:60%;
     }
 }
+.offer__title{
+    width: 70%;
+    margin: 0 auto 0;
 
-// Декстопные стили для offer
-@media screen and (min-width: 1200px){
-    .offer{
-        width:50%;
+    @media @tablet{
+        font-size: 40px;
+        line-height: 48px;
+        width: 50%;
     }
-    .offer__title{
+    @media @desktop{
         font-size: 50px;
         line-height: 60px;
         width:50%;
