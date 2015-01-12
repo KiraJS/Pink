@@ -1,11 +1,41 @@
-// Обычные стили для features
 .features{
      .gradient;
     min-height: 1000px;
     margin: 0 0 30px 0;
+
+    @media @tablet{
+        min-height: 500px;
+        padding: 60px 0 0 0;
+        margin: 0;
+    }
 }
 .feature__image{
     display: none;
+
+    @media @desktop{
+        display: block;
+        width: 195px;
+        height:385px;
+        margin: 0 auto 70px;
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+    }
+
+    &_type_mood{
+        @media @desktop{
+            background-image: url(../img/Iphone_decstop_left.png);
+        }
+    }
+    &_type_world{
+        @media @desktop{
+            background-image: url(../img/Iphone_decstop_center.png);
+        }
+    }
+    &_type_friends{
+        @media @desktop{
+            background-image: url(../img/Iphone_decstop_right.png);
+        }
+    }
 }
 .features__header{
     margin: 0 auto 70px;
@@ -13,20 +43,74 @@
 .features__list{
     list-style-type: none;
     padding: 0;
+
+    @media @tablet{
+        width:50%;
+        padding: 80px 0 0 0;
+        margin: 0;
+        order: 2;
+    }
+    @media @desktop{
+        display: flex;
+        width:80%;
+        justify-content:space-around;
+        margin: 0 auto 0;
+    }
 }
 .features__item{
     list-style: none;
     margin: 0 0 30px;
+
+    @media @tablet{
+        margin: 0 0 20px;
+    }
+
+    @media @desktop{
+        width: 30%;
+    }
 }
 .features__text{
     text-align: center;
     font-weight: @weight_regular;
     width: 73%;
     margin: 0 auto 0;
+
+    @media @tablet{
+        padding: 0;
+        margin:0;
+        text-align: left;
+    }
+
+    @media @desktop{
+        font-size: 18px;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+    }
 }
 .features__title{
     width:70%;
     margin: 0 auto 20px;
+
+    @media @desktop{
+        font-size: 30px;
+        line-height: 30px;
+        width: 100%;
+        min-height: 60px;
+        text-align: center;
+    }
+
+    &_pos_left{
+        @media @tablet{
+            text-align: left;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        @media @desktop{
+            text-align: center;
+        }
+    }
 }
 .features__image-container{
     height:310px;
@@ -36,86 +120,16 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
-}
 
-// Планшетные стили для features
-@media screen and (min-width: 700px){
-    .features{
-        min-height: 500px;
-        padding: 60px 0 0 0;
-        margin: 0;
-    }
-    .features__item{
-        margin: 0 0 20px;
-    }
-    .features__list{
-        width:50%;
-        padding: 80px 0 0 0;
-        margin: 0;
-        order: 2;
-    }
-    .features__text{
-        padding: 0;
-        margin:0;
-        text-align: left;
-    }
-    .features__title_pos_left{
-        text-align: left;
-        margin: 0;
-        margin-bottom: 20px;
-    }
-    .features__image-container{
+    @media @tablet{
         order: 1;
         background-image: url(../img/iphone_features_ipad.png);
         background-position: 10% top;
         height: 525px;
         width:50%;
     }
-}
 
-// Декстопные стили для features
-@media screen and (min-width: 1200px){
-    .features__list{
-        display: flex;
-        width:80%;
-        justify-content:space-around;
-        margin: 0 auto 0;
-    }
-    .features__image-container{
+    @media @desktop{
         display: none;
     }
-    .features__title{
-        font-size: 30px;
-        line-height: 30px;
-        width: 100%;
-    }
-    .features__item{
-        width: 30%;
-    }
-    .features__title,.features__text{
-        text-align: center;
-    }
-    .features__text{
-        font-size: 18px;
-        line-height: 30px;
-        width: 100%;
-    }
-    .feature__image{
-        display: block;
-        width: 195px;
-        height:385px;
-        margin: 0 auto 70px;
-        background-repeat: no-repeat;
-        background-position: 50% 100%;
-    }
-    .feature__image_type_mood{
-        background-image: url(../img/Iphone_decstop_left.png);
-    }
-    .feature__image_type_world{
-        background-image: url(../img/Iphone_decstop_center.png);
-    }
-    .feature__image_type_friends{
-        background-image: url(../img/Iphone_decstop_right.png);
-    }
 }
-

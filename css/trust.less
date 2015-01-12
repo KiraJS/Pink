@@ -1,51 +1,67 @@
-// Обычные стили для trust
 .trust{
     display: none;
-}
 
-// Планшетные стили для trust
-@media screen and (min-width: 700px){
-    .trust{
+    @media @tablet{
         display: flex;
         flex-direction: row;
         min-height: 340px;
         margin: 0 0 60px;
     }
-    .trust__image{
+}
+
+.trust__image{
+    @media @tablet{
         width: 45%;
         background-image: url(../img/trust_icon.png);
         background-repeat: no-repeat;
         background-position: 90% 70%;
     }
-    .trust__item{
+}
+
+.trust__item{
+    @media @tablet{
         width: 35%;
         padding: 90px 40px;
     }
-    .trust__title{
+
+    @media @desktop{
+        width: 65%;
+    }
+}
+
+.trust__title{
+    @media @tablet{
         font-size: 30px;
         font-weight: @weight_bold;
         line-height: 36px;
         width: 65%;
     }
-    .trust__text{
-        width: 84%;
-    }
-    .trust__link{
-        color:@color_red;
-    }
-}
 
-// Декстопные стили для trust
-@media screen and (min-width: 1200px){
-    .trust__item{
-        width: 65%;
-    }
-    .trust__title{
+    @media @desktop{
         font-size:30px;
         line-height: 30px;
     }
-    .trust__text, .trust__link{
+}
+
+.trust__text{
+    @media @tablet{
+        width: 84%;
+    }
+
+    @media @desktop{
         font-size:18px;
         line-height: 30px;
     }
 }
+
+.trust__link{
+    @media @tablet{
+        color:@color_red;
+    }
+
+    @media @desktop{
+        font-size:18px;
+        line-height: 30px;
+    }
+}
+

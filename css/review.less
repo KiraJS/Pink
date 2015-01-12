@@ -1,39 +1,14 @@
-// Обычные стили для review
 .review{
     .gradient;
+
+    @media @tablet{
+        margin: 0 0 40px;
+    }
 }
 .review__caption{
     display: none;
-}
-.review__item{
-    padding-bottom: @padding;
-}
-.review__text{
-    text-align: center;
-    width: 73%;
-    margin: 0 auto 0;
-    line-height: 30px;
-}
 
-// Планшетные стили для review
-@media screen and (min-width: 700px){
-    .review{
-        margin: 0 0 40px;
-    }
-    .review__item{
-        display: flex;
-        flex-direction:column;
-        width:100%;
-    }
-    .review__text{
-        font-size: 18px;
-        line-height: 30px;
-        order: 1;
-    }
-    .review__name{
-        order: 2;
-    }
-    .review__caption{
+    @media @tablet{
         font-size: 14px;
         line-height: 30px;
         display: block;
@@ -41,19 +16,43 @@
         order: 3;
     }
 }
+.review__item{
+    padding-bottom: @padding;
 
-// Декстопные стили для review
-@media screen and (min-width: 1200px){
-    .review__item{
+    @media @tablet{
+        display: flex;
+        flex-direction:column;
+        width:100%;
+    }
+    @media @desktop{
         margin: 0 0 30px;
     }
-    .review__text{
+}
+.review__text{
+    text-align: center;
+    width: 73%;
+    margin: 0 auto 0;
+    line-height: 30px;
+
+    @media @tablet{
+        font-size: 18px;
+        line-height: 30px;
+        order: 1;
+    }
+    @media @desktop{
         padding-top: 70px;
         background-image: url(../img/review_icon.png);
         background-repeat: no-repeat;
         background-position: center top;
     }
-    .review__text_icon_white{
-        background-image: url(../img/review_icon_color_white.png);
+    &_icon_white{
+        @media @desktop{
+            background-image: url(../img/review_icon_color_white.png);
+        }
+    }
+}
+.review__name{
+    @media @tablet{
+        order: 2;
     }
 }
