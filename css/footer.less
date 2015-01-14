@@ -31,13 +31,13 @@
         text-transform: uppercase;
         padding: @padding;
         width: 33%;
-        background-image: url(../img/logo/Pink-logo-footer-2@1x.png);
+        background-image: url(../img/footer__tablet-logo.png);
         background-repeat: no-repeat;
         background-position: 20% 50%;
         margin: auto;
     }
     @media @desktop{
-        background-image:url(../img/logo/Pink-logo-footer-3@1x.png);
+        background-image:url(../img/footer__desktop-logo.png);
     }
 }
 .social,
@@ -61,17 +61,20 @@
     }
     &_link_tw{
         @media @tablet{
-            background-image: url(../img/icon_twitter.png);
+            background-image: url(../img/social__button_link_tw.svg);
+            background-size: 18px 15px;
         }
     }
     &_link_fb{
         @media @tablet{
-            background-image: url(../img/icon_facebook.png);
+            background-image: url(../img/social__button_link_fb.svg);
+            background-size: 9px 19px;
         }
     }
     &_link_yt{
         @media @tablet{
-            background-image: url(../img/icon_youtube.png);
+            background-image: url(../img/social__button_link_yt.svg);
+            background-size: 15px 14px;
         }
     }
 }
@@ -92,5 +95,7 @@
         align-self: center;
         margin: 0;
         margin-right: 7px;
+        width: 20%;
+        height: 26px;
     }
 }
