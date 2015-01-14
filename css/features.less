@@ -23,17 +23,29 @@
 
     &_type_mood{
         @media @desktop{
-            background-image: url(../img/Iphone_decstop_left.png);
+            background-image: url(../img/features__desktop-img_type_mood.png);
+
+            @media @retina_x2{
+                background-image: url(../img/features__desktop-img_type_mood@2x.png);
+            }
         }
     }
     &_type_world{
         @media @desktop{
-            background-image: url(../img/Iphone_decstop_center.png);
+            background-image: url(../img/features__desktop-img_type_world.png);
+
+            @media @retina_x2{
+                background-image: url(../img/features__desktop-img_type_world@2x.png);
+            }
         }
     }
     &_type_friends{
         @media @desktop{
-            background-image: url(../img/Iphone_decstop_right.png);
+            background-image: url(../img/features__desktop-img_type_friends.png);
+
+            @media @retina_x2{
+                background-image: url(../img/features__desktop-img_type_friends@2x.png);
+            }
         }
     }
 }
@@ -116,14 +128,14 @@
     height:310px;
     width: 280px;
     margin: auto;
-    background-image: url(../img/iphone_features.png);
+    background-image: url(../img/features__mobile-image.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
 
     @media @tablet{
         order: 1;
-        background-image: url(../img/iphone_features_ipad.png);
+        background-image: url(../img/features__tablet-img.png);
         background-position: 10% top;
         height: 525px;
         width:50%;
