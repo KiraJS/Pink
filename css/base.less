@@ -56,45 +56,51 @@ nav,section,article,{
 }
 .background-container{
     max-width: 100%;
-    background-image: url(../img/offer__mobile-img.png), url(../img/offer__mobile-bg.jpg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50% 50%, 50% 0% ;
-    background-size: 110%, cover;
+    background-image:
+        url(../img/offer__mobile-img.png),
+        url(../img/offer__mobile-bg.jpg);
+    background-repeat:
+        no-repeat,
+        no-repeat;
+    background-position:
+        50% 50%,
+        50% 0% ;
+    background-size:
+        110%,
+        cover;
 
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-        (-moz-min-device-pixel-ratio: 1.5),
-        (-o-min-device-pixel-ratio: 3/2),
-        (min-device-pixel-ratio: 1.5),
-        (min-resolution: 1.5dppx){
-            background-image: url(../img/offer__mobile-img@2x.png),
+    @media  @retina_x2{
+            background-image:
+                url(../img/offer__mobile-img@2x.png),
                 url(../img/offer__mobile-bg@2x.jpg);
     }
     @media @tablet{
-        background-image: url(../img/offer__tablet-img.png), url(../img/offer__tablet-bg.jpg);
-        background-size: auto, cover;
-        background-position: center bottom;
+        background-image:
+            url(../img/offer__tablet-img.png),
+            url(../img/offer__tablet-bg.jpg);
+        background-size:
+            auto,
+            cover;
+        background-position:
+            center bottom;
 
-        @media (-webkit-min-device-pixel-ratio: 1.5),
-            (-moz-min-device-pixel-ratio: 1.5),
-            (-o-min-device-pixel-ratio: 3/2),
-            (min-device-pixel-ratio: 1.5),
-            (min-resolution: 1.5dppx){
-                background-image: url(../img/offer__tablet-img@2x.png),
+        @media @retina_x2{
+                background-image:
+                    url(../img/offer__tablet-img@2x.png),
                     url(../img/offer__tablet-bg@2x.jpg);
         }
     }
     @media @desktop{
-        background-image: url(../img/offer__desktop-img.png), url(../img/offer__desktop-bg);
-    }
-        @media (-webkit-min-device-pixel-ratio: 1.5),
-            (-moz-min-device-pixel-ratio: 1.5),
-            (-o-min-device-pixel-ratio: 3/2),
-            (min-device-pixel-ratio: 1.5),
-            (min-resolution: 1.5dppx){
-                background-image: url(../img/offer__desktop-img@2x.png),
-                    url(../img/offer__desktop-bg);
+        background-image:
+            url(../img/offer__desktop-img.png),
+            url(../img/offer__desktop-bg.jpg);
+        @media  @retina_x2{
+                background-image:
+                    url(../img/offer__desktop-img@2x.png);
+        }
     }
 }
+
 
 @media @tablet{
     .flex-container{
