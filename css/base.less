@@ -56,11 +56,51 @@ nav,section,article,{
 }
 .background-container{
     max-width: 100%;
-    background-image: url(../img/bg_img_phone_iphone.png), url(../img/bg_photo.jpg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 90% bottom, 50% 0% ;
-    background-size: 600px auto, cover;
+    background-image:
+        url(../img/offer__mobile-img.png),
+        url(../img/offer__mobile-bg.jpg);
+    background-repeat:
+        no-repeat,
+        no-repeat;
+    background-position:
+        50% 50%,
+        50% 0% ;
+    background-size:
+        110%,
+        cover;
+
+    @media  @retina_x2{
+            background-image:
+                url(../img/offer__mobile-img@2x.png),
+                url(../img/offer__mobile-bg@2x.jpg);
+    }
+    @media @tablet{
+        background-image:
+            url(../img/offer__tablet-img.png),
+            url(../img/offer__tablet-bg.jpg);
+        background-size:
+            auto,
+            cover;
+        background-position:
+            center bottom;
+
+        @media @retina_x2{
+                background-image:
+                    url(../img/offer__tablet-img@2x.png),
+                    url(../img/offer__tablet-bg@2x.jpg);
+        }
+    }
+    @media @desktop{
+        background-image:
+            url(../img/offer__desktop-img.png),
+            url(../img/offer__desktop-bg.jpg);
+        @media  @retina_x2{
+                background-image:
+                    url(../img/offer__desktop-img@2x.png);
+        }
+    }
 }
+
 
 @media @tablet{
     .flex-container{
